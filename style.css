@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7f1;  /* Neutral stone color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    background-color: #f8f7f1;
+    color: white;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .nav-left a {
+    background-color: #b61d29;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-right a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  
+ /* Home Content */
+.home-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+  }
+  
+  .image-container {
+    flex: 1;
+    margin: 0 30px;  /* Space between images */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 80%;
+    border-radius: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
