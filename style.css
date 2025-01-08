@@ -65,11 +65,16 @@ body {
 @media (max-width: 768px) {
 
   .home-content {
-    padding: 10px;
+    flex-direction: column;  /* Stack the images vertically */
+    padding: 0px 20px;
   }
 
   nav {
-    padding: 40px;
+    padding: 40px 20px;
+  }
+
+  .image-container {
+    margin: 20px 0;          /* Add vertical space between stacked images */
   }
 
 }
