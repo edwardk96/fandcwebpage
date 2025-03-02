@@ -1,80 +1,112 @@
-/* General Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f7f1;  /* Neutral stone color */
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Navigation Bar */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px;
-    background-color: #f8f7f1;
-    color: white;
-  }
-  
-  nav a:hover {
-    filter: grayscale(50%);
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f8f7f1;
+  color: #333;
+}
 
-  .nav-left a {
-    background-color: #b61d29;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 24px;
-    font-weight: bold;
-  }
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
 
- /* Home Content */
-.home-content {
-    display: flex;
-    justify-content: space-around;
-    padding: 0px 40px 40px 40px;
-  }
-  
-  .image-container {
-    flex: 1;
-    margin: 0 30px;  /* Space between images */
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;  
-    border-radius: 0px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: filter 0.3s ease; /* Smooth transition */
-  }
-  
-  .image-container img:hover {
-    transform: scale(1.01);
-    transition: filter 0.2s ease, transform 0.2s ease;
-  }
+.nav-left a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
 
-  /* Show the Vertical Menu When Toggled */
-  .nav-menu.show {
-    display: grid;
-  }
+/* Transparent Navbar Initially */
+nav.transparent {
+  background: transparent;
+}
 
-/* Responsive Styles for Mobile Screens */
+nav.solid {
+  background: white;
+}
+
+nav.solid .nav-left a {
+  color: black;
+}
+
+/* Landing Section */
+.landing {
+  height: 100vh;
+  background: url('images/landing.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+/* Sections */
+.content {
+  display: flex;
+  height: 100vh;
+}
+
+.dark-section .text-side {
+  background-color: black;
+  color: white;
+}
+
+.dark-section .text-side h2,
+.dark-section .text-side p {
+  color: white; /* Ensures text is readable */
+}
+
+.image-side {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-side {
+  flex: 1;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.text-side h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-
-  .home-content {
-    flex-direction: column;  /* Stack the images vertically */
-    padding: 0px 20px;
+  .content {
+    flex-direction: column;
+  }
+  
+  .image-side {
+    height: 50vh;
   }
 
-  nav {
-    padding: 40px 20px;
+  .text-side {
+    height: 50vh;
   }
-
-  .image-container {
-    margin: 20px 0;          /* Add vertical space between stacked images */
-  }
-
 }
