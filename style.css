@@ -25,10 +25,12 @@ nav {
 }
 
 .nav-left a {
+  background-color: #b61d29;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
   font-size: 24px;
   font-weight: bold;
-  text-decoration: none;
-  color: white;
   transition: color 0.3s ease;
 }
 
@@ -42,7 +44,7 @@ nav.solid {
 }
 
 nav.solid .nav-left a {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 /* Landing Section */
@@ -56,8 +58,10 @@ nav.solid .nav-left a {
 }
 
 .landing h1 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 3rem;
+  background-color: rgb(138, 100, 226);
+  padding: 10px;
 }
 
 /* Sections */
