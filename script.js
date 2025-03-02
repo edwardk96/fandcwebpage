@@ -5,26 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function scrollToSection(index) {
+        if (index < 0 || index >= sections.length) return; // Prevent out-of-bounds scrolling
+
         isScrolling = true;
         sections[index].scrollIntoView({ behavior: "smooth" });
-        setTimeout(() => { isScrolling = false; }, 1000);
+
+        // Prevent multiple scroll events from firing too fast
+        setTimeout(() => { isScrolling = false; }, 800);
     }
 
     window.addEventListener("wheel", (event) => {
-        if (isScrolling) return;
+        if (isScrolling) return; // Block if already scrolling
 
-        if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-            // Scroll down
+        if (event.deltaY > 10 && currentIndex < sections.length - 1) {
+            // Scroll down only if the delta is strong enough
             currentIndex++;
-        } else if (event.deltaY < 0 && currentIndex > 0) {
-            // Scroll up
+        } else if (event.deltaY < -10 && currentIndex > 0) {
+            // Scroll up only if the delta is strong enough
             currentIndex--;
+        } else {
+            return; // Ignore small scrolls
         }
 
         scrollToSection(currentIndex);
     });
 
-    // Navbar scroll effect (merge with intersection observer for better performance)
+    // Navbar opacity change on scroll
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
             navbar.classList.add("solid");
