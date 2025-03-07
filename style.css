@@ -7,7 +7,7 @@
 
 /* Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: arial, sans-serif;
   background-color: #f8f7f1;
   color: #333;
 }
@@ -60,8 +60,13 @@ nav.solid .nav-left a {
 .landing h1 {
   color: rgb(255, 255, 255);
   font-size: 3rem;
-  background-color: rgb(138, 100, 226);
   padding: 10px;
+}
+
+.highlight {
+  background-color: rgb(253, 230, 147);  /* Background color for "FAC" */
+  color: rgb(0, 0, 0);             /* White text inside */
+  padding: 5px 10px;        /* Adds spacing around text */
 }
 
 /* Sections */
@@ -93,6 +98,7 @@ nav.solid .nav-left a {
   justify-content: center;
   align-items: center;
   padding: 40px;
+  flex-direction: column; 
 }
 
 .text-side h2 {
