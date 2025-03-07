@@ -12,6 +12,11 @@ body {
   color: #333;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins' 
+}
+
+
 /* Navbar */
 nav {
   position: fixed;
@@ -96,7 +101,7 @@ nav.solid .nav-left a {
   background: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   padding: 40px;
   flex-direction: column; 
 }
