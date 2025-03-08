@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins' 
 }
 
-
 /* Navbar */
 nav {
   position: fixed;
@@ -111,6 +110,23 @@ nav.solid .nav-left a {
   margin-bottom: 20px;
 }
 
+ul {
+  list-style: none; /* Removes default bullets */
+  padding: 0;
+}
+li {
+  font-size: 1.2rem;
+  margin-bottom: 15px; /* Adjust this value to increase spacing */
+  display: flex;
+  align-items: center;
+}
+li::before {
+  content: attr(data-emoji); /* Uses the emoji from the attribute */
+  margin-right: 10px; /* Space between emoji and text */
+  font-size: 1.2em; /* Adjust emoji size if needed */
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .content {
@@ -125,3 +141,5 @@ nav.solid .nav-left a {
     height: 50vh;
   }
 }
+
+
