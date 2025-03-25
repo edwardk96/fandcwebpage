@@ -117,7 +117,7 @@ nav.solid .nav-left a {
 }
 
 .text-side h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -126,7 +126,7 @@ ul {
   padding: 0;
 }
 li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 15px; /* Adjust this value to increase spacing */
   display: flex;
   align-items: flex-start; /* Ensures text aligns correctly */
@@ -141,6 +141,14 @@ li::before {
 u, em {
   display: inline; /* Forces it to behave like normal text */
   white-space: nowrap; /* Prevents it from wrapping onto a new line */
+}
+
+.boxed-text {
+  font-size: 1rem;
+  border: 2px solid #000000;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0px; /* optional, for nicer rounded corners */
 }
 
 /* Responsive */
