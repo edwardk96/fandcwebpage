@@ -78,7 +78,8 @@ nav.solid .nav-left a {
 .highlight-small {
   background-color: rgb(253, 230, 147);  /* Background color for "FAC" */
   color: rgb(0, 0, 0);             /* White text inside */
-  padding: 2px 5px;        /* Adds spacing around text */
+  padding: 2px 2px;        /* Adds spacing around text */
+  font-weight:700; 
   display: inline;
   white-space: nowrap; /* Prevents unwanted line breaks */
 }
@@ -125,17 +126,25 @@ ul {
   list-style: none; /* Removes default bullets */
   padding: 0;
 }
+
 li {
   font-size: 1rem;
-  margin-bottom: 15px; /* Adjust this value to increase spacing */
+  margin-bottom: 15px;
   display: flex;
-  align-items: flex-start; /* Ensures text aligns correctly */
-  gap: 10px; /* Adds spacing between the emoji and text */
+  align-items: start; /* Ensures top alignment */
+  gap: 10px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 2em; /* Creates space for the emoji */
 }
+
 li::before {
-  content: attr(data-emoji) " "; /* Uses the emoji from the attribute */
-  margin-right: 10px; /* Space between emoji and text */
-  font-size: 1.2em; /* Adjust emoji size if needed */
+  content: attr(data-emoji);
+  position: absolute;
+  left: 0;
+  top: 0.1em; /* Adjust as needed to vertically align emoji */
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 u, em {
