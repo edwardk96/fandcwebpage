@@ -11,16 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
         sections[index].scrollIntoView({ behavior: "smooth" });
 
         // Prevent multiple scroll events from firing too fast
-        setTimeout(() => { isScrolling = false; }, 800);
+        setTimeout(() => { isScrolling = false; }, 500);
     }
 
     window.addEventListener("wheel", (event) => {
         if (isScrolling) return; // Block if already scrolling
 
-        if (event.deltaY > 10 && currentIndex < sections.length - 1) {
+        if (event.deltaY > 5 && currentIndex < sections.length - 1) {
             // Scroll down only if the delta is strong enough
             currentIndex++;
-        } else if (event.deltaY < -10 && currentIndex > 0) {
+        } else if (event.deltaY < -5 && currentIndex > 0) {
             // Scroll up only if the delta is strong enough
             currentIndex--;
         } else {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollToSection(currentIndex);
     });
 
-    // Navbar opacity change on scroll
+    // Navbar becomes opaque as you scroll down the page
     window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
             navbar.classList.add("solid");

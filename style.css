@@ -1,17 +1,18 @@
-/* General Reset */
+/* Reset browser defaults */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* padding and border inclusive inside elements' total w x h */
 }
 
-/* Body */
+/* Default font and colours for the body */
 body {
   font-family: arial, sans-serif;
   background-color: #f8f7f1;
   color: #333;
 }
 
+/* headers set to Poppins font */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins' 
 }
@@ -51,7 +52,7 @@ nav.solid .nav-left a {
   color: rgb(255, 255, 255);
 }
 
-/* Landing Section */
+/* Styling for landing section and cover image */
 .landing {
   height: 100vh;
   background: url('images/landing.jpg') center/cover no-repeat;
@@ -67,38 +68,29 @@ nav.solid .nav-left a {
   padding: 10px;
 }
 
+/* highlights in the style of FAC branding */
 .highlight {
-  background-color: rgb(253, 230, 147);  /* Background color for "FAC" */
-  color: rgb(0, 0, 0);             /* White text inside */
+  background-color: rgb(253, 230, 147);  
+  color: rgb(0, 0, 0);            
   padding: 5px 10px;        /* Adds spacing around text */
   display: inline;
   white-space: nowrap; /* Prevents unwanted line breaks */
 }
 
 .highlight-small {
-  background-color: rgb(253, 230, 147);  /* Background color for "FAC" */
-  color: rgb(0, 0, 0);             /* White text inside */
-  padding: 2px 2px;        /* Adds spacing around text */
+  background-color: rgb(253, 230, 147);  
+  color: rgb(0, 0, 0);             
+  padding: 2px 2px;        
   font-weight:700; 
   display: inline;
-  white-space: nowrap; /* Prevents unwanted line breaks */
+  white-space: nowrap;
 }
 
 
-/* Sections */
+/* Styling for the following sections */
 .content {
   display: flex;
   height: 100vh;
-}
-
-.dark-section .text-side {
-  background-color: black;
-  color: white;
-}
-
-.dark-section .text-side h2,
-.dark-section .text-side p {
-  color: white; /* Ensures text is readable */
 }
 
 .image-side {
@@ -122,11 +114,16 @@ nav.solid .nav-left a {
   margin-bottom: 20px;
 }
 
-ul {
-  list-style: none; /* Removes default bullets */
-  padding: 0;
+.dark-section .text-side {
+  background-color: black;
+  color: white;
 }
 
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+/* formatting to allow for emoji bullets */
 li {
   font-size: 1rem;
   margin-bottom: 15px;
@@ -135,21 +132,16 @@ li {
   gap: 10px;
   line-height: 1.5;
   position: relative;
-  padding-left: 2em; /* Creates space for the emoji */
+  padding-left: 2em; /* Creates space for the emoji bullets */
 }
 
 li::before {
   content: attr(data-emoji);
   position: absolute;
   left: 0;
-  top: 0.1em; /* Adjust as needed to vertically align emoji */
+  top: 0.1em;
   font-size: 1.2em;
   line-height: 1;
-}
-
-u, em {
-  display: inline; /* Forces it to behave like normal text */
-  white-space: nowrap; /* Prevents it from wrapping onto a new line */
 }
 
 .boxed-text {
@@ -157,10 +149,9 @@ u, em {
   border: 2px solid #000000;
   padding: 1rem;
   margin-top: 1rem;
-  border-radius: 0px; /* optional, for nicer rounded corners */
 }
 
-/* Responsive */
+/* Adds basic responsive functionality for the website, though it's certainly optimised for web */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
